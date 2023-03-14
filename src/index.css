@@ -1,0 +1,31 @@
+:root {
+  /* Fonts */
+  --ff-header: font-family: 'Urbanist', sans-serif;
+  --ff-primary: font-family: 'Advent Pro', sans-serif;
+  /* Font Weights */
+  --ff-medium: 500;
+  --ff-semibold: 600;
+  --ff-bold: 700;
+  --ff-extrabold: 800;
+  --ff-black: 900;
+  /* Colors */
+  --clr-orange: hsl(19, 97%, 51%);
+  --clr-light-orange: hsl(20, 86%, 71%);
+  --clr-bright-pink: hsl(329, 100%, 44%);
+  --clr-light-pink: hsl(340, 64%, 86%);
+  --clr-dark-turquoise: hsl(191, 55%, 53%);
+  --clr-raisin-black: hsl(354, 11%, 18%);
+  /* hsla(354, 11%, 18%, 0.94) */
+  --clr-seasalt: hsl(0, 25%, 98%);
+  /* --clr-white: hsl(0, 0%, 100%); */
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
