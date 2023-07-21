@@ -1,12 +1,14 @@
-import './App.css';
-import Navbar from "./components/Navbar";
-import Header from "./components/Header";
+import "./App.scss";
+import Navbar from "./components/Navbar.js";
+import HeroContent from "./components/HeroContent.js";
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Header />
+      <div className="app-header">
+        <Navbar />
+        <HeroContent />
+      </div>
     </div>
   );
 }

@@ -1,0 +1,24 @@
+/*** Theme Colors ***/
+//  Bootstrap Overrides
+// $primary: hsl(19, 97%, 51%);
+$primary: hsl(329, 100%, 44%);
+$light: hsl(0, 20%, 98%);
+$dark: hsl(354, 11%, 18%);
+// My colors
+$primary-light: hsl(340, 64%, 86%);
+$turquoise: hsl(191, 55%, 53%);
+
+/*** Bootstrap Typography Overrides ***/
+$link-color: $dark;
+$link-decoration: none;
+
+/*** Bootstrap Button Overrides ***/
+$input-btn-padding-y-lg: 0.8rem;
+$input-btn-padding-x-lg: 4.5rem;
+$border-radius-lg: 0;
+$input-btn-font-family: "Advent Pro", sans-serif;
+$font-size-lg: 1.5rem;
+$btn-font-weight: 700;
+
+// Importing bootstrap
+@import "~bootstrap/scss/bootstrap";

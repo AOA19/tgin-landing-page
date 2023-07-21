@@ -1,0 +1,57 @@
+@import "custom";
+
+:root {
+  /* Fonts */
+  --ff-header: "Urbanist", sans-serif;
+  --ff-primary: "Advent Pro", sans-serif;
+  /* Font Weights */
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
+  --fw-black: 900;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* Header background image for mobile*/
+.app-header {
+  height: 95vh;
+  width: 100%;
+  position: relative;
+  background-image: url(https://ik.imagekit.io/p6ax2eh8/TGIN_Landing_Page_Images/header-bg-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.41);
+  }
+}
+/* Header background image for tablet*/
+@include media-breakpoint-between(sm, lg) {
+  .app-header {
+    background-image: url(https://ik.imagekit.io/p6ax2eh8/TGIN_Landing_Page_Images/header-bg-tablet.png);
+  }
+}
+/* Header background image for desktop*/
+@include media-breakpoint-up(lg) {
+  .app-header {
+    background-image: url(https://ik.imagekit.io/p6ax2eh8/TGIN_Landing_Page_Images/header-bg-desktop.png);
+    background-position: top center;
+  }
+}

@@ -1,0 +1,49 @@
+@import "../custom.scss";
+
+/******************** MOBILE STYLING ******************/
+.hero {
+  position: relative;
+  text-align: center;
+  top: 20%;
+  padding: 0 12px;
+
+  h1,
+  p {
+    color: $light;
+    font-family: var(--ff-header);
+  }
+}
+
+.hero__heading {
+  font-weight: var(--fw-black);
+  font-size: 50px;
+  span {
+    color: $primary;
+  }
+}
+
+.hero__description {
+  font-size: 18px;
+  font-weight: var(--fw-bold);
+  margin: 25px 0;
+}
+
+.hero__btn {
+  text-transform: uppercase;
+}
+/******************** DESKTOP STYLING ******************/
+
+/********** MEDIA QUERIES **********/
+
+// Mobile -->
+@media screen and (min-width: 575px) {
+  .hero__heading {
+    font-size: 70px;
+    padding: 0 15px;
+  }
+
+  .hero__description {
+    font-size: 25px;
+    margin: 45px 90px;
+  }
+}
