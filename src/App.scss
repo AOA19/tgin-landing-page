@@ -55,3 +55,33 @@ ul {
     background-position: top center;
   }
 }
+
+// Styling for all section headers
+.section-header {
+  color: $dark;
+  font-family: var(--ff-header);
+  font-size: 30px;
+  font-weight: var(--fw-black);
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+
+  &::after {
+    background-color: $dark;
+    content: "";
+    height: 3px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: -10px;
+    width: 60%;
+  }
+}
+
+.bestsellers-section {
+  margin-top: 80px;
+  margin-bottom: 80px;
+   position: relative;
+}
