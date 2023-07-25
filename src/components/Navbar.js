@@ -45,17 +45,17 @@ function Navbar() {
         </ul>
         {/* Desktop navigation menu */}
         <ul className="nav__menu-desktop">
-          <li class="nav__item-desktop">
+          <li className="nav__item-desktop">
             <a href="/#" className="nav-link-desktop text-decoration-none">
               Shop
             </a>
           </li>
-          <li class="nav__item-desktop">
+          <li className="nav__item-desktop">
             <a href="/#" className="nav-link-desktop text-decoration-none">
               About Us
             </a>
           </li>
-          <li class="nav__item-desktop">
+          <li className="nav__item-desktop">
             <a href="/#" className="nav-link-desktop text-decoration-none">
               Contact Us
             </a>
