@@ -12,7 +12,13 @@ function Hero() {
         High-quality hair products infused with nourishing natural ingredients
         to help you achieve and maintain healthy, beautiful hair effortlessly.
       </p>
-      <Button variant="primary" href="/#" type="button" size="lg" className="hero__btn">
+      <Button
+        variant="primary"
+        href="/#"
+        type="button"
+        size="lg"
+        className="hero__btn"
+      >
         Shop Now
       </Button>{" "}
     </div>

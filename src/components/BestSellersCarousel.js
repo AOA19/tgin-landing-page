@@ -1,20 +1,25 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
 import "./BestSellersCarousel.scss";
 import { bestCarousel } from "../data/productsData";
 import Button from "react-bootstrap/Button";
+import { HiArrowLongLeft, HiArrowLongRight } from "react-icons/hi2";
 
-const BestSellersCarousel = ({ item }) => {
+const BestSellersCarousel = ({ data }) => {
   const [carousel, setCarousel] = useState(0);
 
   const nextImg = () => {
-    setCarousel(carousel === item.length - 1 ? 0 : carousel + 1);
+    setCarousel(carousel === data.length - 1 ? 0 : carousel + 1);
   };
   const prevImg = () => {
-    setCarousel(carousel === 0 ? item.length - 1 : carousel - 1);
+    setCarousel(carousel === 0 ? data.length - 1 : carousel - 1);
   };
 
   return (
     <div className="d-flex justify-content-center">
+      {/* Left arrow  */}
+      <button className="arrow-btn arrow-btn__left" aria-label="Previous image">
+        <HiArrowLongLeft onClick={prevImg} className="carousel-arrow" />
+      </button>
       {bestCarousel.map((item, index) => (
         // Best Sellers Image
         <div
@@ -28,7 +33,7 @@ const BestSellersCarousel = ({ item }) => {
           <div>
             <img src={item.src} alt={item.name} className="bestsellers__img" />
           </div>
-          <div className="text-center">
+          <div className="text-center ps-sm-4">
             {/* Product description */}
             <p className="bestsellers__name">{item.name}</p>
             <span className="bestsellers__rating">
@@ -40,7 +45,7 @@ const BestSellersCarousel = ({ item }) => {
               variant="dark"
               href="/#"
               type="button"
-              size="lg"
+              size="sm"
               className="addToCartBtn"
             >
               Add To Cart
@@ -48,6 +53,10 @@ const BestSellersCarousel = ({ item }) => {
           </div>
         </div>
       ))}
+      {/* Right Arrow */}
+      <button className="arrow-btn arrow-btn__right" aria-label="Next image">
+        <HiArrowLongRight onClick={nextImg} className="carousel-arrow" />
+      </button>
       {/*  Carousel Indicators */}
       <span className="bestseller__indicators">
         {bestCarousel.map((item, index) => {
@@ -55,6 +64,7 @@ const BestSellersCarousel = ({ item }) => {
             <button
               key={index}
               onClick={() => setCarousel(index)}
+              aria-label="Next image"
               className={
                 carousel === index
                   ? "indicator"
