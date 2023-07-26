@@ -2,29 +2,7 @@
 
 /******************** MOBILE STYLING ******************/
 .bestsellers__carousel {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  // animation: slide-left 0.6s both;
-  animation: slide-in-right 0.6s both;
-  position: relative;
-}
-
-//  Carousel animation
-@keyframes slide-in-right {
-  0% {
-    transform: translateX(1000px);
-    opacity: 0;
-  }
-  
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-.bestsellers__carousel--hidden {
-  display: none;
+  padding: 0 40px;
 }
 
 .bestsellers__img {
@@ -33,16 +11,24 @@
   width: 100%;
 }
 
-.bestsellers__name {
+.bestsellers__content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   font-family: var(--ff-primary);
+  width: 100%;
+}
+
+.bestsellers__name {
   font-weight: var(--fw-bold);
   font-size: 22px;
   padding: 20px 40px 10px 40px;
   margin-bottom: 0;
+  text-align: center;
 }
 
 .bestsellers__price {
-  font-family: var(--ff-primary);
   font-weight: var(--fw-semibold);
   font-size: 25px;
 }
@@ -50,63 +36,69 @@
 .bestsellers__rating {
   color: $primary;
   font-size: 25px;
+  padding: 20px 0;
 }
 
 .addToCartBtn {
-  padding: 10px 40px;
+  padding: 15px 50px !important;
   text-transform: uppercase;
-  font-size: 18px;
 }
 
 // Carousel arrows
-.arrow-btn {
-  background-color: transparent;
-  border: none;
-  // position: absolute;
-  // bottom: -4rem;
+.slick-arrow {
+  width: 60px;
   height: 60px;
-  margin: auto;
-
-  .carousel-arrow {
-    height: 40px;
-    width: 40px;
-  }
-}
-.arrow-btn__left {
-  margin-left: 20px;
-}
-.arrow-btn__right {
-  margin-right: 20px;
+  z-index: 5;
 }
 
-.bestseller__indicators {
-  bottom: -3rem;
-  display: flex;
-  position: absolute;
+.slick-prev {
+  left: 0;
 
-  .indicator {
-    background-color: $dark;
-    border-radius: 100%;
-    border: none;
-    height: 0.8rem;
-    margin: 0 0.2rem;
-    width: 0.8rem;
-  }
-
-  .indicator--inactive {
-    background-color: $dark-gray;
+  &:before {
+    color: $dark;
+    font-size: 35px;
   }
 }
 
+.slick-next {
+  right: 0;
+
+  &:before {
+    color: $dark;
+    font-size: 35px;
+  }
+}
+
+// Carousel indicators
+.slick-dots {
+  bottom: -50px;
+
+  li button:before {
+    font-size: 22px;
+  }
+}
+
+/********** MEDIA QUERIES *******/
 /******************** TABLET STYLING ******************/
-@include media-breakpoint-up(sm) {
-  .bestsellers__carousel {
-    flex-direction: row;
-    padding: 0 20px;
+@media screen and (max-width: 1000px) {
+  .slick-arrow {
+    display: none !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 900px) {
+  .bestsellers__img {
+    max-width: 400px;
   }
 }
 
 /******************** DESKTOP STYLING ******************/
+@include media-breakpoint-up(sm) {
+  .bestsellers__content {
+    width: 500px;
+  }
+}
+
 @include media-breakpoint-up(lg) {
   .bestsellers__name {
     font-size: 28px;
