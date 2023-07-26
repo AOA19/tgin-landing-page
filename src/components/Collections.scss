@@ -1,0 +1,47 @@
+@import "../custom.scss";
+
+.collection__link {
+  display: inline-block;
+  height: 100%;
+  position: relative;
+}
+
+.collection__img {
+  max-width: 400px;
+  height: auto;
+}
+
+.collection__overlay {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.32);
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  position: absolute;
+  transition: ease-in 0.3s;
+
+  // Hover over animation
+  &:hover {
+     background: rgba(0, 0, 0, 0);
+  }
+
+  .collection__name {
+    color: $light;
+    font-family: var(--ff-primary);
+    font-size: 40px;
+    font-weight: var(--fw-bold);
+    padding: 0 20px;
+    text-align: center;
+    text-shadow: 0px 4px 5px rgba(0, 0, 0, 0.58);
+  }
+}
+
+// Hover over animation
+
+/********* MEDIA QUERIES ********/
+
+@include media-breakpoint-up(sm) {
+  .collection__img {
+    max-width: 500px;
+  }
+}
