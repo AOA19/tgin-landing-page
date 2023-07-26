@@ -11,12 +11,14 @@
   p {
     color: $light;
     font-family: var(--ff-header);
+    text-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
   }
 }
 
 .hero__heading {
   font-weight: var(--fw-black);
   font-size: 3.5rem;
+      
   span {
     color: $primary;
   }

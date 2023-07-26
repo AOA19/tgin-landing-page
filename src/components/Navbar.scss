@@ -68,14 +68,15 @@
 }
 
 .logo {
+  color: $light;
   font-family: var(--ff-header);
+  font-size: 40px;
   left: 42%;
   padding-top: 12px;
   position: absolute;
+  text-shadow: 4px 6px 4px rgba(0, 0, 0, 0.45);
   top: 0;
-  font-size: 40px;
   z-index: 2;
-  color: $light;
 
   span {
     color: $primary;
