@@ -71,6 +71,7 @@ function BestSellersCarousel() {
             <span className="bestsellers__rating">
               &#9733; &#9733; &#9733; &#9733; &#9734;
             </span>
+            <p className="bestsellers__price">${findFirstItem.price}</p>
             <Button
               variant="dark"
               href="/#"
@@ -97,6 +98,7 @@ function BestSellersCarousel() {
             <span className="bestsellers__rating">
               &#9733; &#9733; &#9733; &#9733; &#9734;
             </span>
+            <p className="bestsellers__price">${findFirstItem.price}</p>
             <Button
               variant="dark"
               href="/#"
@@ -123,6 +125,7 @@ function BestSellersCarousel() {
             <span className="bestsellers__rating">
               &#9733; &#9733; &#9733; &#9733; &#9734;
             </span>
+            <p className="bestsellers__price">${findFirstItem.price}</p>
             <Button
               variant="dark"
               href="/#"
