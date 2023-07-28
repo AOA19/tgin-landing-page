@@ -1,0 +1,149 @@
+@import "/src/custom.scss";
+
+.product-col {
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.product__details p {
+  font-family: var(--ff-primary);
+  margin-bottom: 0;
+}
+
+.product__name {
+  font-weight: var(--fw-bold);
+  font-size: 14px;
+  padding-bottom: 8px;
+}
+.product__price {
+  font-weight: var(--fw-medium);
+  font-size: 12px;
+}
+
+.quickView-container {
+  align-items: center;
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  position: absolute;
+
+  .quickViewBtn {
+    // padding: 10px 60px;
+    font-size: 18px;
+    background-color: hsla(354, 11%, 18%, 0.8);
+    box-shadow: $btn-box-shadow;
+    border-color: #00000000;
+
+    &:hover {
+      background-color: $dark;
+      border-color: $dark;
+    }
+  }
+}
+
+// Styling for eveything inside modal
+.modal__img {
+  width: 100%;
+}
+
+.quantity-btn {
+  background: transparent;
+  border: none;
+}
+
+.modal__name {
+  font-family: var(--ff-primary);
+  font-size: 28px;
+  font-weight: var(--fw-bold);
+  @include media-breakpoint-up(lg) {
+    font-size: 28px;
+  }
+}
+
+.modal__description {
+  font-family: var(--ff-header);
+  font-size: 18px;
+  @include media-breakpoint-up(lg) {
+    font-size: 20px;
+  }
+}
+
+.modal__price {
+  font-weight: var(--fw-semibold);
+  font-family: var(--ff-primary);
+  font-size: 25px;
+  @include media-breakpoint-up(lg) {
+    font-size: 28px;
+  }
+}
+
+.modal__quantity {
+  p {
+    font-family: var(--ff-header);
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: var(--fw-bold);
+    margin-bottom: 8px;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 20px;
+    }
+  }
+
+  .quantity-btn,
+  .quantity-icon {
+    width: 30px;
+    height: 30px;
+    transition: fill ease 0.2s;
+    @include media-breakpoint-up(lg) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  .quantity-icon:hover {
+    fill: $primary;
+  }
+
+  .quantity-num {
+    font-family: var(--ff-header);
+    font-size: 22px;
+    font-weight: var(--fw-semibold);
+    padding: 0 8px;
+  }
+}
+
+/********* MEDIA QUERIES ********/
+@include media-breakpoint-up(sm) {
+  .product__name {
+    font-size: 18px;
+  }
+  .product__price {
+    font-size: 16px;
+  }
+  .quickView-container {
+    .quickViewBtn {
+      padding: 8px 50px;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .product__name {
+    font-size: 22px;
+  }
+  .product__price {
+    font-size: 20px;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .modal-left {
+    width: 60%;
+  }
+
+  .modal-right {
+    width: 75%;
+    padding: 0 20px;
+
+  }
+}
