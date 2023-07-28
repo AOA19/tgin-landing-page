@@ -1,9 +1,9 @@
 import "./App.scss";
-import Navbar from "./components/Navbar.js";
-import HeroContent from "./components/HeroContent.js";
-import BestSellersCarousel from "./components/BestSellersCarousel.js";
-import Collections from "./components/Collections";
-
+import Navbar from "./components/Header Section/Navbar.js";
+import HeroContent from "./components/Header Section/HeroContent.js";
+import BestSellersCarousel from "./components/Best Sellers Section/BestSellersCarousel.js";
+import Collections from "./components/Collections Section/Collections";
+import Products from "./components/Products Section/Products";
 // import { bestCarousel } from "./data/productsData.js";
 
 function App() {
@@ -19,7 +19,11 @@ function App() {
       </div>
       <div className="collections-section">
         <h2 className="section-header">Our Collections</h2>
-        <Collections/>
+        <Collections />
+      </div>
+      <div className="products-section">
+        <h2 className="section-header">Shop Our Products</h2>
+        <Products />
       </div>
     </div>
   );

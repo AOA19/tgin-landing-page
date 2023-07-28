@@ -22,6 +22,9 @@ $input-btn-font-family: "Advent Pro", sans-serif;
 $font-size-lg: 1.5rem;
 $font-size-sm: 1.375rem;
 $btn-font-weight: 700;
+$btn-box-shadow:4px 4px 6px rgba(0, 0, 0, 0.21);
+
+/*** Bootstrap Modal Overrides ***/
 
 // Importing bootstrap
 @import "~bootstrap/scss/bootstrap";
