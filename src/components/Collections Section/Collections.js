@@ -1,8 +1,7 @@
 import React from "react";
 import "./Collections.scss";
 import { IKImage } from "imagekitio-react";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import { Row, Col } from "react-bootstrap";
 
 const urlEndpoint = " https://ik.imagekit.io/p6ax2eh8/";
 

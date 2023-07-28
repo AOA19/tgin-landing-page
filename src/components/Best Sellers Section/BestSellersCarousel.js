@@ -54,7 +54,7 @@ function BestSellersCarousel() {
   });
 
   return (
-    <div>
+    <div id="best-sellers">
       <Slider {...settings}>
         {/* Carousel 1 */}
         <div className="bestsellers__carousel d-sm-flex justify-content-center">
@@ -80,7 +80,7 @@ function BestSellersCarousel() {
               className="addToCartBtn"
             >
               Add To Cart
-            </Button>{" "}
+            </Button>
           </div>
         </div>
         {/* Carousel 2 */}
