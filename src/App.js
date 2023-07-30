@@ -6,6 +6,7 @@ import Collections from "./components/Collections Section/Collections";
 import Products from "./components/Products Section/Products";
 import About from "./components/About Section/About"
 import Ingredients from "./components/About Section/Ingredients";
+import Testimonials from "./components/Testimonials Section/Testimonials";
 
 function App() {
   return (
@@ -30,6 +31,9 @@ function App() {
         <h2 className="section-header">About TGIN</h2>
         <About />
         <Ingredients/>
+      </div>
+      <div className="testimonials-section">
+        <Testimonials/>
       </div>
     </div>
   );
