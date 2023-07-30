@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-scroll";
 import "./Footer.scss";
 import { BsInstagram, BsFacebook, BsYoutube, BsTwitter } from "react-icons/bs";
 import {
@@ -49,7 +50,7 @@ function Footer() {
           </Form>
         </div>
         <Container>
-          <Row >
+          <Row>
             {/* Footer Nav links */}
             <Col sm={6} xl={4} className="footer__nav-links">
               <h1 className="footer__logo" aria-label="TGIN Logo">
@@ -59,55 +60,79 @@ function Footer() {
                 {/* Left side of nav */}
                 <ul className="footer__menu footer__menu-left">
                   <li className="footer__nav-item">
-                    <a
-                      href="/#"
+                    <Link
+                      to="about"
+                      spy={true}
+                      smooth={true}
+                      offset={-150}
+                      duration={500}
                       className="footer__nav-link text-decoration-none"
                     >
                       About
-                    </a>
+                    </Link>
                   </li>
                   <li className="footer__nav-item">
-                    <a
-                      href="/#"
+                    <Link
+                      to="testimonials"
+                      spy={true}
+                      smooth={true}
+                      offset={-150}
+                      duration={500}
                       className="footer__nav-link text-decoration-none"
                     >
                       Testimonials
-                    </a>
+                    </Link>
                   </li>
                   <li className="footer__nav-item">
-                    <a
-                      href="/#"
+                    <Link
+                      to="ingredients"
+                      spy={true}
+                      smooth={true}
+                      offset={-150}
+                      duration={500}
                       className="footer__nav-link text-decoration-none"
                     >
                       Ingredients
-                    </a>
+                    </Link>
                   </li>
                 </ul>
                 {/* Right side of nav */}
                 <ul className="footer__menu footer__menu-right">
                   <li className="footer__nav-item">
-                    <a
-                      href="/#"
+                    <Link
+                      to="best-sellers"
+                      spy={true}
+                      smooth={true}
+                      offset={-150}
+                      duration={500}
                       className="footer__nav-link text-decoration-none"
                     >
                       Best Sellers
-                    </a>
+                    </Link>
                   </li>
                   <li className="footer__nav-item">
-                    <a
-                      href="/#"
+                    <Link
+                      to="collections"
+                      spy={true}
+                      smooth={true}
+                      offset={-150}
+                      duration={500}
                       className="footer__nav-link text-decoration-none"
                     >
                       Collections
-                    </a>
+                    </Link>
                   </li>
                   <li className="footer__nav-item">
-                    <a
-                      href="/#"
+                    <Link
+                      to="products"
+                      spy={true}
+                      smooth={true}
+                      offset={-150}
+                      duration={500}
                       className="footer__nav-link text-decoration-none"
                     >
                       Products
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>

@@ -7,7 +7,7 @@ const urlEndpoint = " https://ik.imagekit.io/p6ax2eh8/";
 
 function Collections() {
   return (
-    <div>
+    <div id="collections">
       <Row sm={1} md={1} lg={3}>
         <Col className="g-0 d-flex justify-content-center ">
           <a className="collection__link" href="/#">

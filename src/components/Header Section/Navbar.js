@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from 'react-scroll';
 import { HiMenuAlt2, HiX } from "react-icons/hi";
 import { FaShoppingBag } from "react-icons/fa";
 import "./Navbar.scss";
@@ -28,42 +29,84 @@ function Navbar() {
         {/* Mobile mavigation menu */}
         <ul className={menuOpen ? "nav__menu-mobile show" : "nav__menu-mobile"}>
           <li className="nav__item-mobile">
-            <a href="/#" className="nav-link-mobile">
+            <Link
+              to="products"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={400}
+              className="nav-link-mobile"
+            >
               Shop
-            </a>
+            </Link>
           </li>
           <li className="nav__item-mobile">
-            <a href="/#" className="nav-link-mobile">
+            <Link
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+              className="nav-link-mobile"
+            >
               About Us
-            </a>
+            </Link>
           </li>
           <li className="nav__item-mobile">
-            <a href="/#" className="nav-link-mobile">
+            <Link
+              to="footer"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={300}
+              className="nav-link-mobile"
+            >
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
         {/* Desktop navigation menu */}
         <ul className="nav__menu-desktop">
           <li className="nav__item-desktop">
-            <a href="/#" className="nav-link-desktop text-decoration-none">
+            <Link
+              to="products"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={400}
+              className="nav-link-desktop text-decoration-none"
+            >
               Shop
-            </a>
+            </Link>
           </li>
           <li className="nav__item-desktop">
-            <a href="/#" className="nav-link-desktop text-decoration-none">
+            <Link
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+              className="nav-link-desktop text-decoration-none"
+            >
               About Us
-            </a>
+            </Link>
           </li>
           <li className="nav__item-desktop">
-            <a href="/#" className="nav-link-desktop text-decoration-none">
+            <Link
+              to="footer"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={300}
+              className="nav-link-desktop text-decoration-none"
+            >
               Contact Us
-            </a>
+            </Link>
           </li>
         </ul>
         {/* TGIN LOGO */}
         <div>
-          <a href="/#" className="link-dark">
+          <a href="/" className="link-dark">
             <h1 className="logo" aria-label="TGIN Logo">
               t<span>g</span>in
             </h1>

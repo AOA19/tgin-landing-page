@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 
 function Hero() {
   return (
-    <div className="hero">
+    <div id="hero">
       <h1 className="hero__heading">
         Thank <span>God</span> It's Natural
       </h1>
@@ -14,7 +14,7 @@ function Hero() {
       </p>
       <Button
         variant="primary"
-        href="/#"
+        href="#products"
         type="button"
         size="lg"
         className="hero__btn"
