@@ -1,0 +1,46 @@
+@import "/src/custom.scss";
+
+.ingredients__container {
+  background-color: $dark;
+  padding: 25px 20px;
+  margin-top: 40px;
+
+  p {
+    color: $light;
+  }
+}
+
+.ingredients__header {
+  font-family: var(--ff-header);
+  font-size: 30px;
+  font-weight: var(--fw-extrabold);
+}
+
+.ingredient__name {
+  color: $turquoise !important;
+  font-family: var(--ff-primary);
+  font-size: 25px;
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  margin-top: 15px;
+}
+.ingredient__description {
+  font-family: var(--ff-primary);
+  font-size: 20px;
+  font-weight: var(--fw-semibold);
+}
+
+/******* MEDIA QUERIES ******/
+@include media-breakpoint-up(md) {
+  .header-width {
+    width: 75%;
+  }
+}
+@include media-breakpoint-up(lg) {
+  .header-width {
+    width: 60%;
+  }
+  .ingredients__header {
+    font-size: 40px;
+  }
+}

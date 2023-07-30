@@ -1,0 +1,34 @@
+@import "/src/custom.scss";
+
+.about__img {
+  display: block;
+  width: 100%;
+}
+
+.about__txt {
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-semibold);
+  margin-top: 30px;
+  font-size: 20px;
+  text-align: center;
+}
+
+/******** MEDIA QUERIES *******/
+@include media-breakpoint-up(md) {
+  .about__img-container, .about__txt-container {
+    width: 50%;
+  }
+  .about__img {
+    width: 75%;
+    margin: auto;
+  }
+  .about__txt {
+   text-align: left;
+  }
+}
+
+@include media-breakpoint-up(lg)  {
+    .about__txt {
+        font-size: 28px;
+    }
+}
