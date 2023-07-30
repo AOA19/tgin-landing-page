@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from 'react-scroll';
+import { Link } from "react-scroll";
 import { HiMenuAlt2, HiX } from "react-icons/hi";
 import { FaShoppingBag } from "react-icons/fa";
 import "./Navbar.scss";
@@ -36,6 +36,7 @@ function Navbar() {
               offset={-100}
               duration={400}
               className="nav-link-mobile"
+              onClick={handleMenuClick}
             >
               Shop
             </Link>
@@ -48,6 +49,7 @@ function Navbar() {
               offset={-100}
               duration={500}
               className="nav-link-mobile"
+              onClick={handleMenuClick}
             >
               About Us
             </Link>
@@ -60,6 +62,7 @@ function Navbar() {
               offset={50}
               duration={300}
               className="nav-link-mobile"
+              onClick={handleMenuClick}
             >
               Contact
             </Link>
