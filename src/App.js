@@ -7,6 +7,7 @@ import Products from "./components/Products Section/Products";
 import About from "./components/About Section/About"
 import Ingredients from "./components/About Section/Ingredients";
 import Testimonials from "./components/Testimonials Section/Testimonials";
+import Footer from "./components/Footer Section/Footer";
 
 function App() {
   return (
@@ -34,6 +35,9 @@ function App() {
       </div>
       <div className="testimonials-section">
         <Testimonials/>
+      </div>
+      <div className="footer-section">
+        <Footer/>
       </div>
     </div>
   );
