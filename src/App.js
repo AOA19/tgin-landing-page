@@ -4,7 +4,8 @@ import HeroContent from "./components/Header Section/HeroContent.js";
 import BestSellersCarousel from "./components/Best Sellers Section/BestSellersCarousel.js";
 import Collections from "./components/Collections Section/Collections";
 import Products from "./components/Products Section/Products";
-// import { bestCarousel } from "./data/productsData.js";
+import About from "./components/About Section/About"
+import Ingredients from "./components/About Section/Ingredients";
 
 function App() {
   return (
@@ -24,6 +25,11 @@ function App() {
       <div className="products-section">
         <h2 className="section-header">Shop Our Products</h2>
         <Products />
+      </div>
+      <div className="about-section">
+        <h2 className="section-header">About TGIN</h2>
+        <About />
+        <Ingredients/>
       </div>
     </div>
   );
