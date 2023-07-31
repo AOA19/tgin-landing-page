@@ -1,11 +1,16 @@
 import { useState } from "react";
 import { Link } from "react-scroll";
 import { HiMenuAlt2, HiX } from "react-icons/hi";
-import { FaShoppingBag } from "react-icons/fa";
+// import ShoppingCart from "../Products Section/ShoppingCart";
+// import { FaShoppingBag } from "react-icons/fa";
+// import Modal from "react-bootstrap/Modal";
 import "./Navbar.scss";
 
 function Navbar() {
+  // State variable for navbar
   const [menuOpen, setMenuOpen] = useState(false);
+
+
   const handleMenuClick = () => {
     setMenuOpen((click) => !click);
   };
@@ -115,14 +120,25 @@ function Navbar() {
             </h1>
           </a>
         </div>
-        {/* Shopping cart button */}
-        <button
+
+        {/* Shopping cart */}
+        {/* <ShoppingCart/> */}
+        {/* <button
           className={menuOpen ? "nav__cart dark" : "nav__cart"}
           aria-label="Open shopping cart"
+          onClick={handleShowCart}
         >
           <FaShoppingBag className="nav__icon" />
           <span>0</span>
         </button>
+        <Modal show={showCart} onClick={handleCartClose}>
+          <Modal.Header closeButton>
+            <Modal.Title className="cart__title">
+              Shopping Cart
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body>Testing</Modal.Body>
+        </Modal> */}
       </nav>
     </>
   );

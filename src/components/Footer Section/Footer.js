@@ -26,7 +26,7 @@ function Footer() {
       <Container>
         <div className="footer__subscribe">
           <h3 className="footer__headers">Subscribe To Our Newsletter</h3>
-          <Form onsubmit={handleSubmit} className="footer__form">
+          <Form onSubmit={handleSubmit} className="footer__form">
             {/* Display submitted message */}
             {submitted && (
               <Alert variant="success">

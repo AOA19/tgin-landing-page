@@ -1,9 +1,9 @@
-export const productData = [
+ export const productData = [
   // Shampoo Products
   {
     id: 1,
     name: "Moisture Rich Sulfate Shampoo",
-    category: "Shampoo",
+    type: "Shampoo",
     src: "https://ik.imagekit.io/p6ax2eh8/TGIN_Landing_Page_Images/moisture-shampoo.png",
     price: 15.99,
     size: "regular",
@@ -14,7 +14,7 @@ export const productData = [
   {
     id: 2,
     name: "Rose Water Sulfate Free Hydrating Shampoo",
-    category: "Shampoo",
+    type: "Shampoo",
     src: "https://ik.imagekit.io/p6ax2eh8/TGIN_Landing_Page_Images/rose-water-shampoo.png",
     price: 15.99,
     size: "regular",
@@ -25,7 +25,7 @@ export const productData = [
   {
     id: 3,
     name: "Miracle RepaiRx Strengthening Shampoo",
-    category: "Shampoo ",
+    type: "Shampoo ",
     src: "https://ik.imagekit.io/p6ax2eh8/TGIN_Landing_Page_Images/miracle-repairx-shampoo.png",
     price: 15.99,
     size: "regular",
@@ -37,7 +37,7 @@ export const productData = [
   {
     id: 4,
     name: "Triple Moisture Replenishing Conditioner",
-    category: "Conditioner",
+    type: "Conditioner",
     src: "https://ik.imagekit.io/p6ax2eh8/TGIN_Landing_Page_Images/moisture-conditioner.png",
     price: 15.99,
     size: "regular",
@@ -48,7 +48,7 @@ export const productData = [
   {
     id: 5,
     name: "3-In-1 Cowash Conditioner & Detangler",
-    category: "Conditioner",
+    type: "Conditioner",
     src: "https://ik.imagekit.io/p6ax2eh8/TGIN_Landing_Page_Images/3-in-1-cowash-regular.png",
     price: 15.99,
     size: "regular",
@@ -56,21 +56,21 @@ export const productData = [
     description:
       "Kiss dry hair goodbye and say hello to soft, beautiful moisturized curls with tgin Quench 3-in-1 Co-Wash Conditioner & Detangler.  Infused with shea butter, and sweet almond oil, this lightweight formula has the perfect combination of moisture and antioxidants, which helps to improve manageability, fight frizz, and transform dry brittle strands into soft, smooth and healthy hair.",
   },
-  {
-    id: 6,
-    name: "3-In-1 Cowash Conditioner & Detangler",
-    category: "Conditioner",
-    src: "https://ik.imagekit.io/p6ax2eh8/TGIN_Landing_Page_Images/3-in-1-cowash-jumbo.png",
-    price: 24.99,
-    size: "jumbo",
-    collection: "Moist Collection ",
-    description:
-      "Kiss dry hair goodbye and say hello to soft, beautiful moisturized curls with tgin Quench 3-in-1 Co-Wash Conditioner & Detangler.  Infused with shea butter, and sweet almond oil, this lightweight formula has the perfect combination of moisture and antioxidants, which helps to improve manageability, fight frizz, and transform dry brittle strands into soft, smooth and healthy hair.",
-  },
+  // {
+  //   id: 6,
+  //   name: "3-In-1 Cowash Conditioner & Detangler",
+  //   type: "Conditioner",
+  //   src: "https://ik.imagekit.io/p6ax2eh8/TGIN_Landing_Page_Images/3-in-1-cowash-jumbo.png",
+  //   price: 24.99,
+  //   size: "jumbo",
+  //   collection: "Moist Collection ",
+  //   description:
+  //     "Kiss dry hair goodbye and say hello to soft, beautiful moisturized curls with tgin Quench 3-in-1 Co-Wash Conditioner & Detangler.  Infused with shea butter, and sweet almond oil, this lightweight formula has the perfect combination of moisture and antioxidants, which helps to improve manageability, fight frizz, and transform dry brittle strands into soft, smooth and healthy hair.",
+  // },
   {
     id: 7,
     name: "Rose Water Frizz Free Hydrating Conditioner",
-    category: "Conditioner",
+    type: "Conditioner",
     src: "https://ik.imagekit.io/p6ax2eh8/TGIN_Landing_Page_Images/rose-water-conditioner.png",
     price: 15.99,
     size: "regular",
@@ -81,7 +81,7 @@ export const productData = [
   {
     id: 8,
     name: "Miracle RepaiRx Strengthening Conditioner",
-    category: "Conditioner",
+    type: "Conditioner",
     src: "https://ik.imagekit.io/p6ax2eh8/TGIN_Landing_Page_Images/mircle-repairx-conditioner.png",
     price: 15.99,
     size: "regular",
@@ -93,7 +93,7 @@ export const productData = [
   {
     id: 9,
     name: "Honey Miracle Hair Mask",
-    category: "Hair Masks + Treatments",
+    type: "Hair Masks + Treatments",
     src: "https://ik.imagekit.io/p6ax2eh8/TGIN_Landing_Page_Images/honey-hair-mask-front.png",
     price: 18.99,
     size: "regular",
@@ -101,21 +101,21 @@ export const productData = [
     description:
       "tgin Honey Miracle Hair Mask is like an instant make over for dry, damaged or colored treated hair. This luxurious deep conditioner contains raw honey for softer, shinier tresses and jojoba and olive oils, which nourish and heal strands in need of repair.",
   },
-  {
-    id: 10,
-    name: "Honey Miracle Hair Mask",
-    category: "Hair Masks + Treatments",
-    src: "https://ik.imagekit.io/p6ax2eh8/TGIN_Landing_Page_Images/honey-hair-mask-jumbo.png",
-    price: 32.99,
-    size: "jumbo",
-    collection: "Moist Collection ",
-    description:
-      "tgin Honey Miracle Hair Mask is like an instant make over for dry, damaged or colored treated hair. This luxurious deep conditioner contains raw honey for softer, shinier tresses and jojoba and olive oils, which nourish and heal strands in need of repair.",
-  },
+  // {
+  //   id: 10,
+  //   name: "Honey Miracle Hair Mask",
+  //   type: "Hair Masks + Treatments",
+  //   src: "https://ik.imagekit.io/p6ax2eh8/TGIN_Landing_Page_Images/honey-hair-mask-jumbo.png",
+  //   price: 32.99,
+  //   size: "jumbo",
+  //   collection: "Moist Collection ",
+  //   description:
+  //     "tgin Honey Miracle Hair Mask is like an instant make over for dry, damaged or colored treated hair. This luxurious deep conditioner contains raw honey for softer, shinier tresses and jojoba and olive oils, which nourish and heal strands in need of repair.",
+  // },
   {
     id: 11,
     name: "Rose Water Hydrating Hair Mask",
-    category: "Hair Masks + Treatments",
+    type: "Hair Masks + Treatments",
     src: "https://ik.imagekit.io/p6ax2eh8/TGIN_Landing_Page_Images/rose-water-hair-mask.png",
     price: 18.99,
     size: "regular",
@@ -126,7 +126,7 @@ export const productData = [
   {
     id: 12,
     name: "Miracle RepaiRx Deep Hyrdating Hair Mask",
-    category: "Hair Masks + Treatments",
+    type: "Hair Masks + Treatments",
     src: "https://ik.imagekit.io/p6ax2eh8/TGIN_Landing_Page_Images/miracle-repairx-hair-mask.png",
     price: 18.99,
     size: "regular",
@@ -137,7 +137,7 @@ export const productData = [
   {
     id: 13,
     name: "Miracle RepaiRx CPR Protein Treatment",
-    category: "Hair Masks + Treatments",
+    type: "Hair Masks + Treatments",
     src: "https://ik.imagekit.io/p6ax2eh8/TGIN_Landing_Page_Images/miracle-repairx-protein-treatment.png",
     price: 15.99,
     size: "regular",
@@ -149,7 +149,7 @@ export const productData = [
   {
     id: 14,
     name: "Butter Cream Daily Moisturizer",
-    category: "Stylers",
+    type: "Stylers",
     src: "https://ik.imagekit.io/p6ax2eh8/TGIN_Landing_Page_Images/butterr-cream-front.png",
     price: 15.99,
     size: "regular",
@@ -160,7 +160,7 @@ export const productData = [
   {
     id: 15,
     name: "Twist and Define Cream",
-    category: "Stylers",
+    type: "Stylers",
     src: "https://ik.imagekit.io/p6ax2eh8/TGIN_Landing_Page_Images/twist-define-cream-front.png",
     price: 12.99,
     size: "regular",
@@ -171,7 +171,7 @@ export const productData = [
   {
     id: 16,
     name: "Honey Curls Custard",
-    category: "Stylers",
+    type: "Stylers",
     src: "https://ik.imagekit.io/p6ax2eh8/TGIN_Landing_Page_Images/honey-curls-custard-front.png",
     price: 13.99,
     size: "regular",
@@ -182,7 +182,7 @@ export const productData = [
   {
     id: 17,
     name: "Smooth & Hold Edge Control",
-    category: "Stylers",
+    type: "Stylers",
     src: "https://ik.imagekit.io/p6ax2eh8/TGIN_Landing_Page_Images/smooth-hold-edge-control-front.png",
     price: 9.99,
     size: "regular",
@@ -193,7 +193,7 @@ export const productData = [
   {
     id: 18,
     name: "Curl Bomb Moisturizing Styling Gel",
-    category: "Stylers",
+    type: "Stylers",
     src: "https://ik.imagekit.io/p6ax2eh8/TGIN_Landing_Page_Images/curl-bomb-gel.png",
     price: 15.99,
     size: "regular",
@@ -204,7 +204,7 @@ export const productData = [
   {
     id: 19,
     name: "Sweet Honey Hair Milk",
-    category: "Stylers",
+    type: "Stylers",
     src: "https://ik.imagekit.io/p6ax2eh8/TGIN_Landing_Page_Images/honey-hair-milk.png",
     price: 12.99,
     size: "regular",
@@ -215,7 +215,7 @@ export const productData = [
   {
     id: 20,
     name: "Honey Whip Hydrating Mousse",
-    category: "Stylers",
+    type: "Stylers",
     src: "https://ik.imagekit.io/p6ax2eh8/TGIN_Landing_Page_Images/honey-whip-mousse.png",
     price: 12.99,
     size: "regular",
@@ -226,7 +226,7 @@ export const productData = [
   {
     id: 21,
     name: "Rose Water Curl Defining Styling Gel",
-    category: "Stylers",
+    type: "Stylers",
     src: "https://ik.imagekit.io/p6ax2eh8/TGIN_Landing_Page_Images/rose-water-gel.png",
     price: 15.99,
     size: "regular",
@@ -237,7 +237,7 @@ export const productData = [
   {
     id: 22,
     name: "Rose Water Curl Defining Mousse",
-    category: "Stylers",
+    type: "Stylers",
     src: "https://ik.imagekit.io/p6ax2eh8/TGIN_Landing_Page_Images/rose-water-mousse.png",
     price: 12.99,
     size: "regular",
@@ -248,7 +248,7 @@ export const productData = [
   {
     id: 23,
     name: "Rose Water Curl Refresher",
-    category: "Stylers",
+    type: "Stylers",
     src: "https://ik.imagekit.io/p6ax2eh8/TGIN_Landing_Page_Images/rose-water-curl-refresher.png",
     price: 10.99,
     size: "regular",
@@ -259,7 +259,7 @@ export const productData = [
   {
     id: 24,
     name: "Rose Water Hydrating Curl Cream",
-    category: "Stylers",
+    type: "Stylers",
     src: "https://ik.imagekit.io/p6ax2eh8/TGIN_Landing_Page_Images/rose-water-curl-cream-front.png",
     price: 15.99,
     size: "regular",
@@ -270,7 +270,7 @@ export const productData = [
   {
     id: 25,
     name: "Rose Water Hyrdating Styling Lotion",
-    category: "Stylers",
+    type: "Stylers",
     src: "https://ik.imagekit.io/p6ax2eh8/TGIN_Landing_Page_Images/rose-water-styling-lotion.png",
     price: 12.99,
     size: "regular",
@@ -281,7 +281,7 @@ export const productData = [
   {
     id: 26,
     name: "Miracle RepaiRx Daily Moisturizer",
-    category: "Stylers",
+    type: "Stylers",
     src: "https://ik.imagekit.io/p6ax2eh8/TGIN_Landing_Page_Images/miracle-repairx-moisturizer.png",
     price: 15.99,
     size: "regular",
@@ -292,7 +292,7 @@ export const productData = [
   {
     id: 27,
     name: "Miracle RepaiRx Edge Control",
-    category: "Stylers",
+    type: "Stylers",
     src: "https://ik.imagekit.io/p6ax2eh8/TGIN_Landing_Page_Images/miracle-repairx-edge-control-front.png",
     price: 9.99,
     size: "regular",
@@ -304,7 +304,7 @@ export const productData = [
   {
     id: 28,
     name: "Green Tea Super Moist Leave-in Conditioner",
-    category: "Leave-ins",
+    type: "Leave-ins",
     src: "https://ik.imagekit.io/p6ax2eh8/TGIN_Landing_Page_Images/green-tea-leave-in-regular.png",
     price: 15.99,
     size: "regular",
@@ -312,21 +312,21 @@ export const productData = [
     description:
       "Kiss dry hair goodbye and say hello to soft, beautiful moisturized curls with tgin Green Tea Super Moist Leave in Conditioner. Packed with green tea, shea butter, and argan oil, this lightweight formula has the perfect combination of moisture and antioxidants, which helps to improve manageability, fight frizz, and transform dry brittle strands into soft, smooth and healthy hair. ",
   },
-  {
-    id: 29,
-    name: "Green Tea Super Moist Leave-in Conditioner",
-    category: "Leave-ins",
-    src: "https://ik.imagekit.io/p6ax2eh8/TGIN_Landing_Page_Images/green-tea-leave-in-jumbo.png",
-    price: 24.99,
-    size: "jumbo",
-    collection: "Moist Collection ",
-    description:
-      "Kiss dry hair goodbye and say hello to soft, beautiful moisturized curls with tgin Green Tea Super Moist Leave in Conditioner. Packed with green tea, shea butter, and argan oil, this lightweight formula has the perfect combination of moisture and antioxidants, which helps to improve manageability, fight frizz, and transform dry brittle strands into soft, smooth and healthy hair. ",
-  },
+  // {
+  //   id: 29,
+  //   name: "Green Tea Super Moist Leave-in Conditioner",
+  //   type: "Leave-ins",
+  //   src: "https://ik.imagekit.io/p6ax2eh8/TGIN_Landing_Page_Images/green-tea-leave-in-jumbo.png",
+  //   price: 24.99,
+  //   size: "jumbo",
+  //   collection: "Moist Collection ",
+  //   description:
+  //     "Kiss dry hair goodbye and say hello to soft, beautiful moisturized curls with tgin Green Tea Super Moist Leave in Conditioner. Packed with green tea, shea butter, and argan oil, this lightweight formula has the perfect combination of moisture and antioxidants, which helps to improve manageability, fight frizz, and transform dry brittle strands into soft, smooth and healthy hair. ",
+  // },
   {
     id: 30,
     name: "Rose Water Smoothing Leave-in Conditioner",
-    category: "Leave-ins",
+    type: "Leave-ins",
     src: "https://ik.imagekit.io/p6ax2eh8/TGIN_Landing_Page_Images/rose-water-leave-in-regular.png",
     price: 15.99,
     size: "regular",
@@ -334,35 +334,51 @@ export const productData = [
     description:
       "Our Rose Water Smoothing Leave In Conditioner adds shine and body to dull hair while providing all day moisture. This sulfate and paraben free moisturizer seals in moisture while protecting hair from free radicals and stabilizing hair’s pH balance.",
   },
-  {
-    id: 31,
-    name: "Rose Water Smoothing Leave-in Conditioner",
-    category: "Leave-ins",
-    src: "https://ik.imagekit.io/p6ax2eh8/TGIN_Landing_Page_Images/rose-water-leave-in-jumbo.png",
-    price: 24.99,
-    size: "jumbo",
-    collection: "Curls N Roses Collection  ",
-    description:
-      "Our Rose Water Smoothing Leave In Conditioner adds shine and body to dull hair while providing all day moisture. This sulfate and paraben free moisturizer seals in moisture while protecting hair from free radicals and stabilizing hair’s pH balance.",
-  },
+  // {
+  //   id: 31,
+  //   name: "Rose Water Smoothing Leave-in Conditioner",
+  //   type: "Leave-ins",
+  //   src: "https://ik.imagekit.io/p6ax2eh8/TGIN_Landing_Page_Images/rose-water-leave-in-jumbo.png",
+  //   price: 24.99,
+  //   size: "jumbo",
+  //   collection: "Curls N Roses Collection  ",
+  //   description:
+  //     "Our Rose Water Smoothing Leave In Conditioner adds shine and body to dull hair while providing all day moisture. This sulfate and paraben free moisturizer seals in moisture while protecting hair from free radicals and stabilizing hair’s pH balance.",
+  // },
   {
     id: 32,
     name: "Miracle RepaiRx Protective Leave-in Conditioner",
-    category: "Leave-ins",
+    type: "Leave-ins",
     src: "https://ik.imagekit.io/p6ax2eh8/TGIN_Landing_Page_Images/miracle-repairx-leave-in-regular.png",
     price: 15.99,
     size: "regular",
     collection: "Miracle RepaiRx Collection ",
     description: "Miracle RepaiRx Protective Leave In Conditioner adds definition while replenishing moisture to hair, restoring softness and shine. This intense conditioner uses black castor oil and biotin to treat hair, reducing split ends and promoting hair growth.",
   },
-  {
-    id: 33,
-    name: "Miracle RepaiRx Protective Leave-in Conditioner",
-    category: "Leave-ins",
-    src: "https://ik.imagekit.io/p6ax2eh8/TGIN_Landing_Page_Images/miracle-repairx-leave-in-jumbo.png",
-    price: 24.99,
-    size: "jumbo",
-    collection: "Miracle RepaiRx Collection ",
-    description: "Miracle RepaiRx Protective Leave In Conditioner adds definition while replenishing moisture to hair, restoring softness and shine. This intense conditioner uses black castor oil and biotin to treat hair, reducing split ends and promoting hair growth.",
-  },
+  // {
+  //   id: 33,
+  //   name: "Miracle RepaiRx Protective Leave-in Conditioner",
+  //   type: "Leave-ins",
+  //   src: "https://ik.imagekit.io/p6ax2eh8/TGIN_Landing_Page_Images/miracle-repairx-leave-in-jumbo.png",
+  //   price: 24.99,
+  //   size: "jumbo",
+  //   collection: "Miracle RepaiRx Collection ",
+  //   description: "Miracle RepaiRx Protective Leave In Conditioner adds definition while replenishing moisture to hair, restoring softness and shine. This intense conditioner uses black castor oil and biotin to treat hair, reducing split ends and promoting hair growth.",
+  // },
 ];
+
+
+// function getProductData(id) {
+//   const product = productData.find((product) => product.id === id);
+
+//   if (!product) {
+//     console.log("Product data does not exist for ID: " + id);
+//     return null; // Return null instead of undefined
+//   }
+
+//   return product;
+// }
+
+
+
+// export { productData, getProductData };

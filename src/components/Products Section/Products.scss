@@ -1,5 +1,23 @@
 @import "/src/custom.scss";
 
+// Filter Dropdown styling
+.dropdown-toggle {
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+
+.filter__header {
+    font-family: var(--ff-header);
+    font-weight: var(--fw-bold);
+}
+
+.filter__label {
+    font-family: var(--ff-header);
+    font-weight: var(--fw-medium);
+}
+
+// Product styling 
 .product-col {
   margin-bottom: 40px;
   position: relative;

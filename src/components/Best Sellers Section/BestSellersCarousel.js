@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "react-bootstrap/Button";
+// import Button from "react-bootstrap/Button";
 import { IKImage } from "imagekitio-react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -72,7 +72,7 @@ function BestSellersCarousel() {
               &#9733; &#9733; &#9733; &#9733; &#9734;
             </span>
             <p className="bestsellers__price">${findFirstItem.price}</p>
-            <Button
+            {/* <Button
               variant="dark"
               href="/#"
               type="button"
@@ -80,7 +80,7 @@ function BestSellersCarousel() {
               className="addToCartBtn"
             >
               Add To Cart
-            </Button>
+            </Button> */}
           </div>
         </div>
         {/* Carousel 2 */}
@@ -99,7 +99,7 @@ function BestSellersCarousel() {
               &#9733; &#9733; &#9733; &#9733; &#9734;
             </span>
             <p className="bestsellers__price">${findFirstItem.price}</p>
-            <Button
+            {/* <Button
               variant="dark"
               href="/#"
               type="button"
@@ -107,7 +107,7 @@ function BestSellersCarousel() {
               className="addToCartBtn"
             >
               Add To Cart
-            </Button>{" "}
+            </Button>{" "} */}
           </div>
         </div>
         {/* Carousel 3 */}
@@ -126,7 +126,7 @@ function BestSellersCarousel() {
               &#9733; &#9733; &#9733; &#9733; &#9734;
             </span>
             <p className="bestsellers__price">${findFirstItem.price}</p>
-            <Button
+            {/* <Button
               variant="dark"
               href="/#"
               type="button"
@@ -134,7 +134,7 @@ function BestSellersCarousel() {
               className="addToCartBtn"
             >
               Add To Cart
-            </Button>{" "}
+            </Button>{" "} */}
           </div>
         </div>
       </Slider>

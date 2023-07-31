@@ -1,0 +1,49 @@
+@import "/src/custom.scss";
+
+.nav__cart {
+  color: $light;
+  position: absolute;
+  right: 30px;
+  top: 12px;
+  z-index: 5;
+  background-color: transparent;
+  border: none;
+
+  span {
+    color: $primary;
+    font-weight: var(--fw-bold);
+    left: 12px;
+    position: absolute;
+    top: 12px;
+  }
+}
+
+.nav__icon {
+  font-size: 35px;
+}
+
+
+.cart__item-name {
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-semibold);
+  font-size: 20px;
+}
+
+.removeItemBtn {
+  background:none;
+  border: none;
+
+  svg {
+    color: $primary;
+  }
+}
+
+.total-price {
+  font-family: var(--ff-header);
+  font-weight: var(--fw-bold);
+  font-size: 22px;
+  text-align: right;
+}
+
+
+/******* MEDIA QUERIES *****/

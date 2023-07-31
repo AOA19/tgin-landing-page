@@ -28,25 +28,25 @@
 }
 
 // Shopping Cart Styling
-.nav__cart {
-  color: $light;
-  position: absolute;
-  right: 30px;
-  top: 12px;
-  z-index: 5;
+// .nav__cart {
+//   color: $light;
+//   position: absolute;
+//   right: 30px;
+//   top: 12px;
+//   z-index: 5;
 
-  span {
-    color: $primary;
-    font-weight: var(--fw-bold);
-    left: 12px;
-    position: absolute;
-    top: 12px;
-  }
-}
+//   span {
+//     color: $primary;
+//     font-weight: var(--fw-bold);
+//     left: 12px;
+//     position: absolute;
+//     top: 12px;
+//   }
+// }
 // Change color of cart when mobile menu open
-.nav__cart.dark {
-  color: $dark;
-}
+// .nav__cart.dark {
+//   color: $dark;
+// }
 
 // Mobile Nav menu styling
 .nav__menu-mobile {
