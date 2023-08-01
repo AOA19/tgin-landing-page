@@ -96,6 +96,7 @@
   font-weight: var(--fw-bold);
   position: relative;
   text-transform: uppercase;
+  cursor: pointer;
 
   &::after {
     background-color: $primary;
@@ -133,6 +134,7 @@
   color: $light;
   position: relative;
   text-shadow: 4px 4px 4px rgba(81, 79, 79, 0.58);
+  cursor: pointer;
 
   &::after {
     background-color: $primary;
