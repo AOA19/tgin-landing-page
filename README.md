@@ -36,7 +36,7 @@ npm install
 
 - [AOA19](https://github.com/AOA19/tgin-landing-page)
 
-### Acknowledgements
+## Acknowledgements
 
  - [Code Commerce](https://youtu.be/GDd2c70gsxE)  React Website Tutorial
  - All product images sourced from [TGIN](https://tginatural.com/) 
