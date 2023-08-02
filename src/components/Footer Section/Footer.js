@@ -29,7 +29,7 @@ function Footer() {
           <Form onSubmit={handleSubmit} className="footer__form">
             {/* Display submitted message */}
             {submitted && (
-              <Alert variant="success">
+              <Alert variant="primary" className="order-3">
                 You are now subscribed to our newsletter!
               </Alert>
             )}
