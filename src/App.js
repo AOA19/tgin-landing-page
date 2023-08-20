@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.scss";
+import "./components/Header Section/Navbar.scss";
 import Navbar from "./components/Header Section/Navbar.js";
 import HeroContent from "./components/Header Section/HeroContent.js";
 import BestSellersCarousel from "./components/Best Sellers Section/BestSellersCarousel.js";
@@ -50,15 +51,28 @@ function App() {
     );
   };
 
+  // Change nav-header color when scrolling
+  const [color, setColor] = useState(false);
+  const changeColor = () => {
+    if (window.scrollY >= 80) {
+      setColor(true);
+    } else {
+      setColor(false);
+    }
+  };
+  window.addEventListener("scroll", changeColor);
+
   return (
     <div className="App">
-      <div className="app-header">
-        <Navbar />
-        <ShoppingCart
-          cartItems={cartItems}
-          onRemoveItem={removeFromCart}
-          onUpdateQuantity={handleUpdateQuantity}
-        />
+      <div className="app-header" id="home">
+        <div className={color ? "nav-header nav-header--bg" : "nav-header"}>
+          <Navbar />
+          <ShoppingCart
+            cartItems={cartItems}
+            onRemoveItem={removeFromCart}
+            onUpdateQuantity={handleUpdateQuantity}
+          />
+        </div>
         <HeroContent />
       </div>
       <div className="bestsellers-section">
