@@ -1,22 +1,33 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { HiMenuAlt2, HiX } from "react-icons/hi";
-// import ShoppingCart from "../Products Section/ShoppingCart";
-// import { FaShoppingBag } from "react-icons/fa";
-// import Modal from "react-bootstrap/Modal";
+import NavDropdown from "react-bootstrap/NavDropdown";
 import "./Navbar.scss";
 
 function Navbar() {
   // State variable for navbar
   const [menuOpen, setMenuOpen] = useState(false);
+  const handleMenuClick = () => setMenuOpen(!menuOpen);
+  //Close menu
+  const closeMenu = () => setMenuOpen(false);
 
+  // Close mobile nav menu on resize for larger screens
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 992) {
+        setMenuOpen(false);
+      }
+    };
+    window.addEventListener("resize", handleResize);
 
-  const handleMenuClick = () => {
-    setMenuOpen((click) => !click);
-  };
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  });
+
   return (
     <>
-      <nav className="nav-bar">
+      <nav className="nav__bar">
         {/* Navigation buttons (hamburger & cart) */}
         <div className="px-2">
           <button
@@ -32,113 +43,130 @@ function Navbar() {
           </button>
         </div>
         {/* Mobile mavigation menu */}
-        <ul className={menuOpen ? "nav__menu-mobile show" : "nav__menu-mobile"}>
-          <li className="nav__item-mobile">
-            <Link
-              to="products"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={400}
-              className="nav-link-mobile"
-              onClick={handleMenuClick}
-            >
-              Shop
-            </Link>
-          </li>
-          <li className="nav__item-mobile">
-            <Link
-              to="about"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-              className="nav-link-mobile"
-              onClick={handleMenuClick}
-            >
-              About Us
-            </Link>
-          </li>
-          <li className="nav__item-mobile">
+        <ul className={menuOpen ? "nav__menu show" : "nav__menu"}>
+          <div className="text-center d-lg-flex align-items-lg-center py-3 px-lg-3">
+            <NavDropdown title="Shop" className="nav__dropdown">
+              {/* Best Sellers dropdown */}
+              <NavDropdown.Item className="nav__item">
+                <Link
+                  to="best-sellers"
+                  spy={true}
+                  smooth={true}
+                  offset={-200}
+                  duration={400}
+                  className="nav__link"
+                  onClick={closeMenu}
+                >
+                  Best Sellers
+                </Link>
+              </NavDropdown.Item>
+              {/* Collections dropdown */}
+              <NavDropdown.Item className="nav__item">
+                <Link
+                  to="collections"
+                  spy={true}
+                  smooth={true}
+                  offset={-200}
+                  duration={400}
+                  className="nav__link"
+                  onClick={closeMenu}
+                >
+                  Collections
+                </Link>
+              </NavDropdown.Item>
+              {/* Products dropdown */}
+              <NavDropdown.Item className="nav__item">
+                <Link
+                  to="products"
+                  spy={true}
+                  smooth={true}
+                  offset={-500}
+                  duration={400}
+                  className="nav__link"
+                  onClick={closeMenu}
+                >
+                  Products
+                </Link>
+              </NavDropdown.Item>
+            </NavDropdown>
+          </div>
+          <div className="text-center d-lg-flex align-items-lg-center py-3 px-lg-3 ">
+            <NavDropdown title="About" className="nav__dropdown">
+              {/* About TGIN */}
+              <NavDropdown.Item className="nav__item">
+                <Link
+                  to="about"
+                  spy={true}
+                  smooth={true}
+                  offset={-200}
+                  duration={500}
+                  className="nav__link"
+                  onClick={closeMenu}
+                >
+                  About TGIN
+                </Link>
+              </NavDropdown.Item>
+              {/* Ingredients */}
+              <NavDropdown.Item className="nav__item">
+                <Link
+                  to="ingredients"
+                  spy={true}
+                  smooth={true}
+                  offset={-200}
+                  duration={500}
+                  className="nav__link"
+                  onClick={closeMenu}
+                >
+                  Ingredients
+                </Link>
+              </NavDropdown.Item>
+              {/* Testimonals */}
+              <NavDropdown.Item className="nav__item">
+                <Link
+                  to="testimonials"
+                  spy={true}
+                  smooth={true}
+                  offset={-200}
+                  duration={500}
+                  className="nav__link"
+                  onClick={closeMenu}
+                >
+                  Testimonals
+                </Link>
+              </NavDropdown.Item>
+            </NavDropdown>
+          </div>
+          {/* Contact Link */}
+          <li className="nav__item-contact py-3 px-lg-3">
             <Link
               to="footer"
               spy={true}
               smooth={true}
               offset={50}
               duration={300}
-              className="nav-link-mobile"
-              onClick={handleMenuClick}
+              className="contact-link"
+              onClick={closeMenu}
+              tabIndex={0}
             >
               Contact
             </Link>
           </li>
         </ul>
-        {/* Desktop navigation menu */}
-        <ul className="nav__menu-desktop">
-          <li className="nav__item-desktop">
-            <Link
-              to="products"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={400}
-              className="nav-link-desktop text-decoration-none"
-            >
-              Shop
-            </Link>
-          </li>
-          <li className="nav__item-desktop">
-            <Link
-              to="about"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-              className="nav-link-desktop text-decoration-none"
-            >
-              About Us
-            </Link>
-          </li>
-          <li className="nav__item-desktop">
-            <Link
-              to="footer"
-              spy={true}
-              smooth={true}
-              offset={50}
-              duration={300}
-              className="nav-link-desktop text-decoration-none"
-            >
-              Contact Us
-            </Link>
-          </li>
-        </ul>
         {/* TGIN LOGO */}
         <div>
-          <a href="/" className="link-dark">
+          <Link
+            to="home"
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={300}
+            className="link-dark"
+          >
             <h1 className="logo" aria-label="TGIN Logo">
               t<span>g</span>in
             </h1>
-          </a>
+          </Link>
         </div>
-
-        {/* Shopping cart */}
-        {/* <ShoppingCart/> */}
-        {/* <button
-          className={menuOpen ? "nav__cart dark" : "nav__cart"}
-          aria-label="Open shopping cart"
-          onClick={handleShowCart}
-        >
-          <FaShoppingBag className="nav__icon" />
-          <span>0</span>
-        </button>
-        <Modal show={showCart} onClick={handleCartClose}>
-          <Modal.Header closeButton>
-            <Modal.Title className="cart__title">
-              Shopping Cart
-            </Modal.Title>
-          </Modal.Header>
-          <Modal.Body>Testing</Modal.Body>
-        </Modal> */}
       </nav>
     </>
   );

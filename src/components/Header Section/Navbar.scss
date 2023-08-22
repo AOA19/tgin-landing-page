@@ -1,59 +1,50 @@
 @import "/src/custom.scss";
 
 /******************** MOBILE STYLING ******************/
-/* Navigation button styling */
-.nav-bar {
-  button {
-    background-color: transparent;
-    border: none;
-  }
+
+// Class in App.js
+.nav-header {
+  height: 75px;
+  position: fixed;
+  width: 100%;
+  z-index: 20;
+  transition: 0.3s ease-in;
+}
+.nav-header--bg {
+  background-color: hsla(354, 11%, 18%, 0.982);
 }
 
+/* Navigation button styling */
 .nav__hamburger {
+  background-color: transparent;
+  border: none;
   padding: 15px;
   position: relative;
   z-index: 10;
+
+  .nav__icon {
+    font-size: 35px;
+  }
+
+  .bars {
+    color: $light;
+  }
+
+  .cross {
+    color: $dark;
+  }
 }
-
-.nav__icon {
-  font-size: 35px;
-}
-
-.bars {
-  color: $light;
-}
-
-.cross {
-  color: $dark;
-}
-
-// Shopping Cart Styling
-// .nav__cart {
-//   color: $light;
-//   position: absolute;
-//   right: 30px;
-//   top: 12px;
-//   z-index: 5;
-
-//   span {
-//     color: $primary;
-//     font-weight: var(--fw-bold);
-//     left: 12px;
-//     position: absolute;
-//     top: 12px;
-//   }
-// }
-// Change color of cart when mobile menu open
-// .nav__cart.dark {
-//   color: $dark;
-// }
 
 // Mobile Nav menu styling
-.nav__menu-mobile {
+.nav__menu {
+  display: none;
+}
+
+.nav__menu.show {
   background-color: $light;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 100vh;
   justify-content: center;
   padding: 40px 0;
   position: absolute;
@@ -63,12 +54,86 @@
   z-index: 5;
 }
 
-.nav__menu-mobile.show {
-  top: 0;
+// Nav Dropdpwn styling
+.dropdown-menu.show {
+  inset: auto 0;
+  text-align: center;
 }
 
+.nav__dropdown {
+  color: $dark;
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--ff-header);
+  font-size: 28px;
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+
+  &::after {
+    background-color: $primary;
+    content: "";
+    height: 3px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: 0.3s ease-in-out;
+    width: 0;
+  }
+  &:hover::after {
+    content: "";
+    height: 3px;
+    width: 100%;
+  }
+
+  .nav__item {
+    font-family: var(--ff-header);
+    text-align: center;
+  }
+
+  .nav__link {
+    color: $dark;
+    font-size: 22px;
+    font-weight: var(--fw-bold);
+    text-transform: capitalize;
+  }
+}
+
+// Styling for nav contact link
+.nav__item-contact {
+  text-align: center;
+}
+
+.contact-link {
+  color: $dark;
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--ff-header);
+  font-size: 28px;
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  position: relative;
+
+  &::after {
+    background-color: $primary;
+    content: "";
+    height: 3px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: 0.3s ease-in-out;
+    width: 0;
+  }
+  &:hover::after {
+    content: "";
+    height: 3px;
+    width: 100%;
+  }
+}
+
+// Logo styling
 .logo {
   color: $light;
+  cursor: pointer;
   font-family: var(--ff-header);
   font-size: 40px;
   left: 42%;
@@ -83,97 +148,43 @@
   }
 }
 
-.nav__item-mobile {
-  font-family: var(--ff-header);
-  padding: 25px 0;
-  text-align: center;
-}
-
-.nav-link-mobile {
-  color: $dark;
-  display: inline-block;
-  font-size: 28px;
-  font-weight: var(--fw-bold);
-  position: relative;
-  text-transform: uppercase;
-  cursor: pointer;
-
-  &::after {
-    background-color: $primary;
-    content: "";
-    height: 2px;
-    left: 0;
-    position: absolute;
-    top: 0;
-    transition: 0.3s ease-in-out;
-    width: 0;
-  }
-  &:hover::after {
-    content: "";
-    height: 2px;
-    width: 100%;
-  }
-}
-
 /******************** DESKTOP STYLING ******************/
-/* NAV MENU FOR DESKTOP */
-.nav__menu-desktop {
-  display: flex;
-}
-
-// Desktop nav items
-.nav__item-desktop {
-  font-size: 22px;
-  font-weight: var(--ff-bold);
-  padding: 20px 15px;
-  text-transform: uppercase;
-}
-
-// Desktop nav links
-.nav-link-desktop {
-  color: $light;
-  position: relative;
-  text-shadow: 4px 4px 4px rgba(81, 79, 79, 0.58);
-  cursor: pointer;
-
-  &::after {
-    background-color: $primary;
-    content: "";
-    display: block;
-    height: 3px;
-    position: absolute;
-    top: -10px;
-    transition: 0.3s ease-in-out;
-    width: 0;
-  }
-  &:hover::after {
-    content: "";
-    height: 3px;
-    width: 100%;
-  }
-  &:hover {
-    color: #d1c9c9;
-  }
-}
 
 /********** MEDIA QUERIES **********/
 
-// Mobile <- Tablet
-@media screen and (max-width: 991px) {
-  .nav__menu-desktop {
-    display: none;
-  }
-}
-
 // Tablet -> Desktop
 @include media-breakpoint-up(lg) {
-  .nav__hamburger,
-  .nav__menu-mobile {
+  .nav__hamburger {
     display: none;
+  }
+
+  .nav__menu {
+    display: flex;
+  }
+
+  .nav__item {
+    padding: 20px 15px;
+  }
+
+  // Dropdown for desktop
+  .nav__dropdown,
+  .contact-link {
+    color: $light;
+    text-shadow: 4px 4px 4px rgba(81, 79, 79, 0.58);
+    font-size: 25px;
+
+    &:hover {
+      color: #d1c9c9;
+    }
+  }
+
+  .nav__link {
+    text-shadow: none;
   }
 
   .logo {
     font-size: 55px;
     left: 48%;
+    padding-top: 0;
   }
 }

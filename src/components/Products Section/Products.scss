@@ -1,20 +1,13 @@
 @import "/src/custom.scss";
 
 // Filter Dropdown styling
-.dropdown-toggle {
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-}
-
-
 .filter__header {
     font-family: var(--ff-header);
-    font-weight: var(--fw-bold);
+    font-weight: var(--fw-black);
 }
 
-.filter__label {
-    font-family: var(--ff-header);
-    font-weight: var(--fw-medium);
+.filter__btn {
+  font-size: 18px !important;
 }
 
 // Product styling 
