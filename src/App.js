@@ -1,20 +1,32 @@
 import { useState } from "react";
-import "./App.scss";
-import "./components/Header Section/Navbar.scss";
 import Navbar from "./components/Header Section/Navbar.js";
 import HeroContent from "./components/Header Section/HeroContent.js";
 import BestSellersCarousel from "./components/Best Sellers Section/BestSellersCarousel.js";
 import Collections from "./components/Collections Section/Collections";
 import Products from "./components/Products Section/Products";
+import ShoppingCart from "./components/Products Section/ShoppingCart.js";
 import About from "./components/About Section/About";
 import Ingredients from "./components/About Section/Ingredients";
 import Testimonials from "./components/Testimonials Section/Testimonials";
 import Footer from "./components/Footer Section/Footer";
-import ShoppingCart from "./components/Products Section/ShoppingCart";
+import "./App.scss";
+import "./components/Header Section/Navbar.scss";
 
 function App() {
+  const [color, setColor] = useState(false);
   const [cartItems, setCartItems] = useState([]);
 
+  // Change nav-header color when scrolling
+  const changeColor = () => {
+    if (window.scrollY >= 80) {
+      setColor(true);
+    } else {
+      setColor(false);
+    }
+  };
+  window.addEventListener("scroll", changeColor);
+
+  //
   const addToCart = (item) => {
     const existingItem = cartItems.find((cartItem) => cartItem.id === item.id);
     if (existingItem) {
@@ -50,17 +62,6 @@ function App() {
       )
     );
   };
-
-  // Change nav-header color when scrolling
-  const [color, setColor] = useState(false);
-  const changeColor = () => {
-    if (window.scrollY >= 80) {
-      setColor(true);
-    } else {
-      setColor(false);
-    }
-  };
-  window.addEventListener("scroll", changeColor);
 
   return (
     <div className="App">

@@ -80,7 +80,7 @@ function Navbar() {
                   to="products"
                   spy={true}
                   smooth={true}
-                  offset={-200}
+                  offset={-500}
                   duration={400}
                   className="nav__link"
                   onClick={closeMenu}

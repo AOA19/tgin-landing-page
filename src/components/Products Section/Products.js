@@ -1,58 +1,18 @@
 import { useState } from "react";
 import "./Products.scss";
-// import Filter from "./Filter";
 import { productData } from "../../data/productsData";
-import {
-  Row,
-  Col,
-  Button,
-  // Dropdown,
-  // DropdownButton,
-  // Form,
-  Modal,
-  ModalBody,
-} from "react-bootstrap";
+import { Row, Col, Button, Modal, ModalBody } from "react-bootstrap";
 import { HiPlusCircle, HiMinusCircle } from "react-icons/hi2";
 
 function Products({ cartItems, addToCart }) {
-
   // initial value of the state variable is an empty object
   const [currentItem, setCurrentItem] = useState({});
   // modal/popup is intially set to false so it's closed
   const [showModal, setShowModal] = useState(false);
   // state variables for quantity in the modal
   const [quantity, setQuantity] = useState(1);
-
-  // const [filterCheckboxes, setFilterCheckboxes] = useState([
-  //   { id: 1, label: "Shampoos", checked: false, filterOption: "type" },
-  //   { id: 2, label: "Conditioners", checked: false, filterOption: "type" },
-  //   {
-  //     id: 3,
-  //     label: "Hair Masks + Treatments",
-  //     checked: false,
-  //     filterOption: "type",
-  //   },
-  //   { id: 4, label: "Leave-ins", checked: false, filterOption: "type" },
-  //   { id: 5, label: "Stylers", checked: false, filterOption: "type" },
-  //   {
-  //     id: 6,
-  //     label: "Moist Collection",
-  //     checked: false,
-  //     filterOption: "collection",
-  //   },
-  //   {
-  //     id: 7,
-  //     label: "Curls N Roses Collection",
-  //     checked: false,
-  //     filterOption: "collection",
-  //   },
-  //   {
-  //     id: 8,
-  //     label: "Miracle RepaiRx Collection",
-  //     checked: false,
-  //     filterOption: "collection",
-  //   },
-  // ]);
+  // For Filter
+  const [productsFilter, setProductsFilter] = useState(productData);
 
   // setPopupShop function takes an 'item' as input
   const handleModalShow = (item) => {
@@ -62,32 +22,14 @@ function Products({ cartItems, addToCart }) {
     setShowModal(true);
   };
 
- const handleModalHide = () => {
-   // reset the 'currentItem' state to an empty object, clearing the data from currentItem
-   setCurrentItem({});
-   // reset the 'quantity' state to 1 when hiding the modal
-   setQuantity(1);
-   // hide the popup by setting the 'showModal state to false
-   setShowModal(false);
- };
-
-
-  // const handleCheckboxChange = (id, filterOption) => {
-  //   const updatedCheckboxes = filterCheckboxes.map((checkbox) => {
-  //     if (checkbox.id === id) {
-  //       return { ...checkbox, checked: !checkbox.checked };
-  //     }
-  //     return checkbox;
-  //   });
-  //   setFilterCheckboxes(updatedCheckboxes);
-  // };
-  // Reset Checkboxes
-  // const handleReset = () => {
-  //   const resetCheckboxes = filterCheckboxes.map((checkbox) => {
-  //     return { ...checkbox, checked: false };
-  //   });
-  //   setFilterCheckboxes(resetCheckboxes);
-  // };
+  const handleModalHide = () => {
+    // reset the 'currentItem' state to an empty object, clearing the data from currentItem
+    setCurrentItem({});
+    // reset the 'quantity' state to 1 when hiding the modal
+    setQuantity(1);
+    // hide the popup by setting the 'showModal state to false
+    setShowModal(false);
+  };
 
   //Function to increase and decrease the quantity
   const increaseQuantity = () => {
@@ -98,65 +40,131 @@ function Products({ cartItems, addToCart }) {
     setQuantity((prevQuantity) => (prevQuantity > 1 ? prevQuantity - 1 : 1));
   };
 
-     const handleAddToCart = () => {
-       addToCart({ ...currentItem, quantity: quantity });
-       handleModalHide();
-     };
+  const handleAddToCart = () => {
+    addToCart({ ...currentItem, quantity: quantity });
+    handleModalHide();
+  };
 
+  // Filter by Type
+  const filterType = (type) => {
+    setProductsFilter(
+      productData.filter((item) => {
+        return item.type === type;
+      })
+    );
+  };
+  // Filter by Collection
+  const filterCollection = (collection) => {
+    setProductsFilter(
+      productData.filter((item) => {
+        return item.collection === collection;
+      })
+    );
+  };
 
   return (
     <div id="products">
-      {/* Filter */}
-      {/* <DropdownButton title="Filter" variant="dark" className=" mb-5">
-        <Dropdown.ItemText className="filter__header">
-          Filter by Type
-        </Dropdown.ItemText> */}
-        {/* Filter by Type Group */}
-        {/* <div className="px-3 filter-type">
-          {filterCheckboxes.map((checkbox) =>
-            checkbox.filterOption === "type" ? (
-              <Form.Check
-                key={checkbox.id}
-                type="checkbox"
-                className="filter__label"
-                label={checkbox.label}
-                checked={checkbox.checked}
-                onChange={() => handleCheckboxChange(checkbox.id)}
-              />
-            ) : null
-          )}
-        </div> */}
-        {/* Filter by Collection Group */}
-        {/* <Dropdown.ItemText className="filter__header">
-          Filter by Collection
-        </Dropdown.ItemText>
-        <div className="px-3 filter-collection">
-          {filterCheckboxes.map((checkbox) =>
-            checkbox.filterOption === "collection" ? (
-              <Form.Check
-                key={checkbox.id}
-                type="checkbox"
-                className="filter__label"
-                label={checkbox.label}
-                checked={checkbox.checked}
-                onChange={() => handleCheckboxChange(checkbox.id)}
-              />
-            ) : null
-          )}
-        </div> */}
-        {/* Reset Button */}
-        {/* <div className="text-center my-3">
-          <Button
-            onClick={handleReset}
-            className="resetBtn px-4 text-uppercase"
-          >
-            Reset
-          </Button>
+      <div className="filter-btns">
+        {/* Filter By Type */}
+        <div className="filter pb-3">
+          <h4 className="filter__header">Filter By Type</h4>
+          {/* Filter Row */}
+          <div className="d-flex flex-wrap">
+            <Button
+              variant="dark"
+              type="button"
+              size="sm"
+              className="filter__btn m-1"
+              onClick={() => setProductsFilter(productData)}
+            >
+              All
+            </Button>
+            <Button
+              variant="dark"
+              type="button"
+              size="sm"
+              className="filter__btn m-1"
+              onClick={() => filterType("Shampoo")}
+            >
+              Shampoos
+            </Button>
+            <Button
+              variant="dark"
+              type="button"
+              size="sm"
+              className="filter__btn m-1"
+              onClick={() => filterType("Conditioner")}
+            >
+              Conditioners
+            </Button>
+            <Button
+              variant="dark"
+              type="button"
+              size="sm"
+              className="filter__btn m-1"
+              onClick={() => filterType("Leave-ins")}
+            >
+              Leave-ins
+            </Button>
+            <Button
+              variant="dark"
+              type="button"
+              size="sm"
+              className="filter__btn m-1"
+              onClick={() => filterType("Hair Masks")}
+            >
+              Hair Masks
+            </Button>
+            <Button
+              variant="dark"
+              type="button"
+              size="sm"
+              className="filter__btn m-1"
+              onClick={() => filterType("Stylers")}
+            >
+              Stylers
+            </Button>
+          </div>
         </div>
-      </DropdownButton> */}
+        {/* Filter By Collection */}
+        <div className="filter pb-3">
+          <h4 className="filter__header">Filter By Collection</h4>
+          {/* Filter Row */}
+          <div className="d-flex flex-wrap">
+            <Button
+              variant="dark"
+              type="button"
+              size="sm"
+              className="filter__btn m-1"
+              onClick={() => filterCollection("Moist Collection")}
+            >
+              Moist Collection
+            </Button>
+            <Button
+              variant="dark"
+              type="button"
+              size="sm"
+              className="filter__btn m-1"
+              onClick={() => filterCollection("Curls N Roses Collection")}
+            >
+              Curl N Roses Collection
+            </Button>
+            <Button
+              variant="dark"
+              type="button"
+              size="sm"
+              className="filter__btn m-1"
+              onClick={() => filterCollection("Miracle RepaiRx Collection")}
+            >
+              Miracle RepaiRx Collection
+            </Button>
+          </div>
+        </div>
+      </div>
+
       {/* Display products */}
       <Row xs={2} lg={3}>
-        {productData.map((item, index) => (
+        {productsFilter.map((item) => (
           <Col key={item.id} className="product-col">
             <img
               src={item.src}
@@ -235,7 +243,6 @@ function Products({ cartItems, addToCart }) {
                   size="lg"
                   className="addToCartBtn w-100"
                   onClick={handleAddToCart}
-                  // onClick={() => addToCart(currentItem)}
                 >
                   Add To Cart
                 </Button>
