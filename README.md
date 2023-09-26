@@ -6,7 +6,8 @@ shopping cart.
 
 ***Project Link*** : https://tgin-landing-page.netlify.app/
 
-<img width="1000" alt="tgin-screenshot-desktop" src="https://github.com/AOA19/tgin-landing-page/assets/66294921/81d524ba-d20a-40b9-b998-a58128e71940">
+<img width="1000" alt="tgin-screenshot-desktop" src="https://github.com/AOA19/tgin-landing-page/assets/66294921/40f1a070-3423-43b6-9d00-2e3c13e72ad3">
+
 
  ### Built With
  * ReactJS
