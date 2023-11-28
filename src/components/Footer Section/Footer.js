@@ -192,7 +192,7 @@ function Footer() {
         {/* Footer credit */}
         <div className="footer__credit text-center">
           <p className="credit mb-0">
-            Desgined and Developed By
+            Designed and Developed By
             <a
               href="https://github.com/AOA19/tgin-landing-page"
               aria-label="Vist github repo"
